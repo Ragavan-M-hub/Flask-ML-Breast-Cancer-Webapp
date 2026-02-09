@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Risk Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Breast Cancer Risk Analysis</h1>
+        
+        <form action="/predict" method="post">
+            <h2>Enter Parameters</h2>
+            <label>Mean Radius: <input type="number" step="any" name="mean radius" required></label>
+            <label>Mean Texture: <input type="number" step="any" name="mean texture" required></label>
+            <label>Mean Perimeter: <input type="number" step="any" name="mean perimeter" required></label>
+            <label>Mean Area: <input type="number" step="any" name="mean area" required></label>
+            <label>Mean Smoothness: <input type="number" step="any" name="mean smoothness" required></label>
+            <button type="submit">Predict Risk</button>
+        </form>
+    </div>
+</body>
+</html>
